@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".demo.WeatherFragment">
+
+    <Spinner
+        android:id="@+id/sp_city_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:background="@drawable/bg_spinner"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/txt_city_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Delhi"
+                android:textSize="26sp"
+                android:textColor="@color/black"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="10sp"
+                android:textAlignment="textStart"
+                app:layout_constraintWidth_percent="0.95"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="40"
+                android:textSize="75sp"
+                android:textColor="@color/black"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="10sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/txt_city_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_high_temp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="High: 20"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="10sp"
+                android:textAlignment="textEnd"
+                app:layout_constraintTop_toTopOf="@+id/txt_temp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_temp"/>
+
+            <TextView
+                android:id="@+id/txt_low_temp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="Low: 20"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="10sp"
+                android:textAlignment="textEnd"
+                app:layout_constraintBottom_toBottomOf="@+id/txt_temp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txt_temp"/>
+
+            <TextView
+                android:id="@+id/txt_temp_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temparature"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="10sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/txt_temp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_hum_head"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Humidity"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="10sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/txt_temp_head"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txt_hum"/>
+
+            <TextView
+                android:id="@+id/txt_hum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Humidity"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="10sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/txt_temp_head"
+                app:layout_constraintStart_toEndOf="@+id/txt_hum_head"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txt_wind_head"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Pressure"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="10sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/txt_hum_head"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/txt_wind"/>
+
+            <TextView
+                android:id="@+id/txt_wind"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Wind Speed"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:letterSpacing="-0.03"
+                android:lineSpacingExtra="10sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/txt_hum"
+                app:layout_constraintStart_toEndOf="@+id/txt_wind_head"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:id="@+id/txt_city_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Cities"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:lineHeight="28sp"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="10sp"
+        android:textAllCaps="true"
+        app:layout_constraintTop_toBottomOf="@+id/card_view" />
+
+    <RadioGroup
+        android:id="@+id/rd_grp_city"
+        android:layout_width="0dp"
+        android:checkedButton="@id/rd_btn_delhi"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_city_head">
+
+        <RadioButton
+            android:id="@+id/rd_btn_delhi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Delhi"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:lineHeight="28sp"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="10sp"
+            android:button="@drawable/radio_btn"/>
+
+        <RadioButton
+            android:id="@+id/rd_btn_kolkata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Kolkata"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:lineHeight="28sp"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="10sp"
+            android:button="@drawable/radio_btn"/>
+
+        <RadioButton
+            android:id="@+id/rd_btn_bangalore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Bangalore"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:lineHeight="28sp"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="10sp"
+            android:button="@drawable/radio_btn"/>
+
+        <RadioButton
+            android:id="@+id/rd_btn_hyderabad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Hyderabad"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:lineHeight="28sp"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="10sp"
+            android:button="@drawable/radio_btn"/>
+
+        <RadioButton
+            android:id="@+id/rd_btn_mumbai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Mumbai"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:lineHeight="28sp"
+            android:letterSpacing="-0.03"
+            android:lineSpacingExtra="10sp"
+            android:button="@drawable/radio_btn"/>
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

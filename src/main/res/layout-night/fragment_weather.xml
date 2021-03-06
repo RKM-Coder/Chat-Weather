@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".WeatherFragment">
+
+    <Spinner
+        android:id="@+id/sp_city_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_spinner"
+        app:layout_constraintWidth_percent="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txt_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Temparature"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="10sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/sp_city_list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txt_hum"/>
+
+    <TextView
+        android:id="@+id/txt_hum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Humidity"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="10sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/sp_city_list"
+        app:layout_constraintStart_toEndOf="@+id/txt_temp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_wind"/>
+
+    <TextView
+        android:id="@+id/txt_wind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wind Speed"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:letterSpacing="-0.03"
+        android:lineSpacingExtra="10sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@+id/sp_city_list"
+        app:layout_constraintStart_toEndOf="@+id/txt_hum"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
